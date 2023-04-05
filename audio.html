@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audio</title>
+    <style>
+        #audio-buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+            border: 5px solid #000;
+            padding: 20px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 5px 10px;
+            background-color: rgb(3, 162, 6);
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ccc;
+        }
+        body {
+    background-color: #186a8a;
+  }
+    </style>
+</head>
+<body>
+    
+    <center> <h2>Table of songs</h2></center>
+
+    <div id="audio-buttons">
+        <button onclick="playAudio1()" type="button">Play Audio 1</button> 
+        <button onclick="pauseAudio1()" type="button">Pause Audio 1</button>
+        <button onclick="playAudio2()" type="button">Play Audio 2</button> 
+        <button onclick="pauseAudio2()" type="button">Pause Audio 2</button>
+        <button onclick="playAudio3()" type="button">Play Audio 3</button> 
+        <button onclick="pauseAudio3()" type="button">Pause Audio 3</button> 
+        <button onclick="playAudio4()" type="button">Play Audio 4</button> 
+        <button onclick="pauseAudio4()" type="button">Pause Audio 4</button> 
+        <button onclick="playAudio5()" type="button">Play Audio 5</button> 
+        <button onclick="pauseAudio5()" type="button">Pause Audio 5</button>
+    </div>
+
+    <audio id="FirstSong">
+        <source src="music/firstsong.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="SecondSong">
+        <source src="music/secondsong.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="ThirdSong">
+        <source src="music/thirdsong.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="FourthSong">
+        <source src="music/fourthsong.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="FifthSoung">
+        <source src="music/fifthsong.mp3" type="audio/mpeg">
+    </audio>
+
+    <script> 
+        var firstsong = document.getElementById("FirstSong"); 
+        var secondsong = document.getElementById("SecondSong"); 
+        var thirdsong = document.getElementById("ThirdSong"); 
+        var fourthsong = document.getElementById("FourthSong"); 
+        var fifthsong = document.getElementById("FifthSoung"); 
+
+        function playAudio1() { 
+            firstsong.play(); 
+        }        
+
+        function pauseAudio1(){ 
+            firstsong.pause(); 
+        }
+
+        function playAudio2() { 
+            secondsong.play(); 
+		}
+
+        function pauseAudio2() { 
+            secondsong.pause(); 
+        }        
+
+        function playAudio3(){ 
+            thirdsong.play(); 
+        }
+
+        function pauseAudio3() { 
+            thirdsong.pause(); 
+        }     
+        
+        function playAudio4() { 
+            fourthsong.play(); 
+        }        
+
+        function pauseAudio4(){ 
+            fourthsong.pause(); 
+        }
+
+        function playAudio5() { 
+            fifthsong.play(); 
+        }        
+
+        function pauseAudio5(){ 
+            fifthsong.pause(); 
+        }
+
+        
+
+
+		</script>
+		<left><a href="index.html">HomePage</a></left>
+		</body>
+		</html>
