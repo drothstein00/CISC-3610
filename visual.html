@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+</head>
+<body>
+    <canvas id="DoughChart" width="700" height="200"></canvas>
+    <canvas id="BarChart" width="450" height="140"></canvas>
+
+    <script>
+        var circle = document.getElementById('DoughChart').getContext('2d');
+        var DoughChart = new Chart(circle, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    'Kitkat',
+                    'Hersheys',
+                    'Twizzlers',
+                    'Milky Way',
+                    'Reeses'
+                ],
+                datasets: [{
+                    label: 'Candy Amount',
+                    data: [50, 100, 200, 40, 70],
+                    backgroundColor: [
+                        'rgb(305, 89, 140)',
+                        'rgb(70, 170, 250)',
+                        'rgb(330, 165, 170)',
+                        'rgb(350, 185, 10)',
+                        'rgb(400, 234, 310)'
+                    ],
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Favorite Halloween Candy'
+                }
+            }
+        });
+        </script>
+        <script>
+        var bar = document.getElementById('BarChart').getContext('2d');
+        var BarChart = new Chart(bar, {
+            type: 'bar',
+            data: {
+                labels: [
+                    'January',
+                    'February',
+                    'March',
+                    'April',
+                    'May'
+                ],
+                datasets: [{
+                    label: 'Votes',
+                    data: [100, 250, 200, 350, 150],
+                    backgroundColor: 'rgb(70, 170, 250)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Favorite Month Picked by Teenagers'
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+    <center ><a href="index.html">HomePage</a></center>
+</body>
+</html>
