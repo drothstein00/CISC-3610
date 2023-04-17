@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="s1.css">
+    <script src="script.js"></script>
+    
+</head>
+<body>
+    <center><h>Click the Categories for a visual</h></center>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#science" onclick="showImage('dog.png')">Science</a>
+                    <div>
+                        <label for="scienceage">Enter your age:</label>
+                        <input type="number" id="scienceage" name="scienceage"><br>
+                        <button onclick="calDogYears()">Calculate Dog Years</button>
+                        <p id="dogyears"></p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#business" onclick="showImage('interest.jpg')">Business</a>
+                    <div>
+                      <label for="loanamount">Enter the loan amount:</label><br>
+                      <input type="number" id="loanamount" name="loanamount" min="1"><br>
+                      <label for="interestrate">Enter the interest rate:</label><br>
+                      <input type="number" id="interestrate" name="interestrate" min="0" max="100" step="0.01"><br>
+                      <label for="loanterm">Enter amount of years with loan:</label>
+                      <input type="number" id="loanterm" name="loanterm" min="1">
+                      <button onclick="calInterest()">Calculate Interest</button>
+                      <p id="interest"></p>
+                    </div>
+                  </li>                
+                <li>
+                    <a href="#temperature" onclick="showImage('therm.jpg')">Temperature</a>
+                    <div>
+                        <label for="tempfahrenheit">Enter temperature in Fahrenheit:</label>
+                        <input type="number" id="tempfahrenheit" name="tempfahrenheit">
+                        <button onclick="calTemperature()">Convert to Celsius</button>
+                        <p id="tempcelsius"></p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#space" onclick="showImage('earth.jpg')">Space</a>
+                    <div>
+                        <label for="weight">Enter weight in pounds:</label>
+                        <input type="text" id="weight" name="weight">
+                        <br><label for="planet">Select a planet:</label>
+                        <select id="planet" name="planet">
+                            <option value="Mercury">Mercury</option>
+                            <option value="Venus">Venus</option>
+                            <option value="Mars">Mars</option>
+                            <option value="Jupiter">Jupiter</option>
+                            <option value="Saturn">Saturn</option>
+                            <option value="Uranus">Uranus</option>
+                            <option value="Neptune">Neptune</option>
+                            <option value="Pluto">Pluto</option>
+                        </select>
+                        <button onclick="calWeight()">Calculate Weight</button>
+                        <p id="weight-on-planet"></p>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <center><button onclick="resetFields()">Reset</button></center>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <center><a href="index.html">HomePage</a></center>
+</body>
+</html>
